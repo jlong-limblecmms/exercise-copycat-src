@@ -1,0 +1,19 @@
+name: CopyCat
+on:
+  push:
+    branches: [main]
+jobs:
+  copy:
+    name: "CopyCat"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: andstor/copycat-action@v3
+        with:
+          personal_token: ${{ secrets.REPO_TOKEN }}
+          src_path: src/files/.
+          dst_path: /files/
+          src_branch: main
+          dst_branch: main
+          dst_owner: jlong-limblecmms
+          dst_repo_name: exercise-copycat-dst
+          clean: true
