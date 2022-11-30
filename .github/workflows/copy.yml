@@ -10,8 +10,8 @@ jobs:
       - uses: andstor/copycat-action@v3
         with:
           personal_token: ${{ secrets.REPO_TOKEN }}
-          src_path: src/files/.
-          dst_path: /files/
+          src_path: src/files/
+          dst_path: /
           src_branch: main
           dst_branch: main
           dst_owner: jlong-limblecmms
